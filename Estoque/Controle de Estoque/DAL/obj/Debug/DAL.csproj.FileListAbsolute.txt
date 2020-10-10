@@ -1,0 +1,9 @@
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\DAL\bin\Debug\DAL.dll
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\DAL\bin\Debug\DAL.pdb
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\DAL\bin\Debug\Modelo.dll
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\DAL\bin\Debug\Modelo.pdb
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\DAL\obj\Debug\DAL.dll
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\DAL\obj\Debug\DAL.pdb
