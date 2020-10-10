@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DadosDaConexao.cs" />
+    <Compile Include="DALCategoria.cs" />
+    <Compile Include="DALConexao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
