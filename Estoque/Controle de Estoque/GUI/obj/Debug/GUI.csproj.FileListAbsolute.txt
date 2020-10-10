@@ -14,3 +14,5 @@ C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\GUI\obj\Debug\G
 C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\GUI\obj\Debug\GUI.csproj.CopyComplete
 C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\GUI\obj\Debug\GUI.exe
 C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\GUI\obj\Debug\GUI.pdb
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\GUI\obj\Debug\GUI.frmModeloFormularioCadastro.resources
+C:\Desenv\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\GUI\obj\Debug\GUI.frmPrincipal.resources
