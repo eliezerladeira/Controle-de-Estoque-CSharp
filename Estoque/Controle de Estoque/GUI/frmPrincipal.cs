@@ -23,5 +23,12 @@ namespace GUI
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void subCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroSubCategoria f = new frmCadastroSubCategoria();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }
