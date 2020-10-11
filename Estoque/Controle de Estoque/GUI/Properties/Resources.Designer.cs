@@ -103,6 +103,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap localizar3_fw {
+            get {
+                object obj = ResourceManager.GetObject("localizar3.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Novo {
             get {
                 object obj = ResourceManager.GetObject("Novo", resourceCulture);
@@ -116,6 +126,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap Salvar1_fw {
             get {
                 object obj = ResourceManager.GetObject("Salvar1.fw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xmag_search_find_export_locate_5984 {
+            get {
+                object obj = ResourceManager.GetObject("xmag_search_find_export_locate_5984", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

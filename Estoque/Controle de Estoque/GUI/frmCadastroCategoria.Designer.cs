@@ -51,6 +51,7 @@
             // btnLocalizar
             // 
             this.btnLocalizar.FlatAppearance.BorderSize = 0;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // btnSalvar
             // 
@@ -60,10 +61,12 @@
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnInserir
             // 
@@ -107,7 +110,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Name = "frmCadastroCategoria";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Categorias";
             this.Load += new System.EventHandler(this.frmCadastroCategoria_Load);
             this.panDados.ResumeLayout(false);
