@@ -50,22 +50,27 @@
             // btnCancelar
             // 
             this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnLocalizar
             // 
             this.btnLocalizar.FlatAppearance.BorderSize = 0;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // btnSalvar
             // 
             this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnInserir
             // 
@@ -101,6 +106,7 @@
             // 
             // txtSCodigo
             // 
+            this.txtSCodigo.Enabled = false;
             this.txtSCodigo.Location = new System.Drawing.Point(12, 47);
             this.txtSCodigo.Name = "txtSCodigo";
             this.txtSCodigo.Size = new System.Drawing.Size(100, 20);
