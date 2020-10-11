@@ -108,17 +108,18 @@ namespace GUI
 
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            frmConsultaCategoria f = new frmConsultaCategoria();
+            frmConsultaSubCategoria f = new frmConsultaSubCategoria();
             f.ShowDialog();
 
             if (f.codigo != 0)
             {
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
-                BLLCategoria bll = new BLLCategoria(cx);
+                BLLSubCategoria bll = new BLLSubCategoria(cx);
 
-                ModeloCategoria modelo = bll.CarregaModeloCategoria(f.codigo);
-                txtCodigo.Text = modelo.CatCod.ToString();
-                txtCategoria.Text = modelo.CatNome;
+                ModeloSubCategoria modelo = bll.CarregaModeloSubCategoria(f.codigo);
+                txtSCodigo.Text = modelo.ScatCod.ToString();
+                txtSubCategoria.Text = modelo.ScatNome;
+                cmbCategoria.SelectedValue = modelo.CatCod;
 
                 alteraBotoes(3);
             }

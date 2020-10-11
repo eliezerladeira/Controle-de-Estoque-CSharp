@@ -37,3 +37,4 @@ C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Estoque\Controle de 
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\GUI\obj\Debug\GUI.pdb
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\GUI\obj\Debug\GUI.frmConsultaCategoria.resources
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\GUI\obj\Debug\GUI.frmCadastroSubCategoria.resources
+C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\GUI\obj\Debug\GUI.frmConsultaSubCategoria.resources
