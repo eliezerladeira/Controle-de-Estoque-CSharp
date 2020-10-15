@@ -88,7 +88,9 @@ namespace DAL
         public DataTable Localizar(String valor)
         {
             DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM subcategoria WHERE scat_nome LIKE '%" + valor + "%'", conexao.StringConexao);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT sc.scat_cod, sc.scat_nome, sc.cat_cod, c.cat_nome FROM subcategoria sc " +
+                "INNER JOIN categoria c ON sc.cat_cod = c.cat_cod " +
+                "WHERE scat_nome LIKE '%" + valor + "%'", conexao.StringConexao);
             da.Fill(tabela);
             return tabela;
         }

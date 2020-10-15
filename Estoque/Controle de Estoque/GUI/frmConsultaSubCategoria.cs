@@ -36,9 +36,11 @@ namespace GUI
             dgvDados.Columns[0].HeaderText = "Código";
             dgvDados.Columns[0].Width = 50;
             dgvDados.Columns[1].HeaderText = "SubCategoria";
-            dgvDados.Columns[1].Width = 500;
+            dgvDados.Columns[1].Width = 200;
             dgvDados.Columns[2].HeaderText = "Categoria";
             dgvDados.Columns[2].Width = 50;
+            dgvDados.Columns[3].HeaderText = "Categoria";
+            dgvDados.Columns[3].Width = 200;
         }
 
         private void dgvDados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
