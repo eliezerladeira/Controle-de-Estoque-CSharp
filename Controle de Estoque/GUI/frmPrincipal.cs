@@ -30,5 +30,12 @@ namespace GUI
             f.ShowDialog();
             f.Dispose();
         }
+
+        private void unidadesDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroUnidadeMedida f = new frmCadastroUnidadeMedida();
+            f.ShowDialog();
+            f.Dispose();
+        }
     }
 }

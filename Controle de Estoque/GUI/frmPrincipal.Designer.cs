@@ -32,6 +32,7 @@
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subCategoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unidadesDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.categoriasToolStripMenuItem,
-            this.subCategoriasToolStripMenuItem});
+            this.subCategoriasToolStripMenuItem,
+            this.unidadesDeMedidaToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
@@ -57,16 +59,23 @@
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
             // subCategoriasToolStripMenuItem
             // 
             this.subCategoriasToolStripMenuItem.Name = "subCategoriasToolStripMenuItem";
-            this.subCategoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.subCategoriasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.subCategoriasToolStripMenuItem.Text = "SubCategorias";
             this.subCategoriasToolStripMenuItem.Click += new System.EventHandler(this.subCategoriasToolStripMenuItem_Click);
+            // 
+            // unidadesDeMedidaToolStripMenuItem
+            // 
+            this.unidadesDeMedidaToolStripMenuItem.Name = "unidadesDeMedidaToolStripMenuItem";
+            this.unidadesDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.unidadesDeMedidaToolStripMenuItem.Text = "Unidades de Medida";
+            this.unidadesDeMedidaToolStripMenuItem.Click += new System.EventHandler(this.unidadesDeMedidaToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -91,5 +100,6 @@
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem subCategoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unidadesDeMedidaToolStripMenuItem;
     }
 }

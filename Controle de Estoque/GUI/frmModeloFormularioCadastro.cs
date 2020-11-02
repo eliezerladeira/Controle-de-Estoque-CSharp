@@ -32,6 +32,7 @@ namespace GUI
             btnLocalizar.Enabled = false;
             btnExcluir.Enabled = false;
             btnSalvar.Enabled = false;
+            btnCancelar.Enabled = false;
 
             if (op == 1)
             {
