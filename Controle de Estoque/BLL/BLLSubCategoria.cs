@@ -42,7 +42,7 @@ namespace BLL
                 throw new Exception("A subcategoria é obrigatória!");
 
             DALSubCategoria DALobj = new DALSubCategoria(conexao);
-            DALobj.Incluir(modelo);
+            DALobj.Alterar(modelo);
         }
 
         public void Excluir(int codigo)

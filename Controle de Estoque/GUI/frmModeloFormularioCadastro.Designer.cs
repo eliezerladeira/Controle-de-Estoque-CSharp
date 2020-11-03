@@ -81,7 +81,7 @@
             this.btnLocalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLocalizar.Image = global::GUI.Properties.Resources.localizar_fw;
             this.btnLocalizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLocalizar.Location = new System.Drawing.Point(599, 2);
+            this.btnLocalizar.Location = new System.Drawing.Point(591, 2);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(90, 90);
             this.btnLocalizar.TabIndex = 4;
@@ -111,7 +111,7 @@
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = global::GUI.Properties.Resources.Excluir;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExcluir.Location = new System.Drawing.Point(395, 2);
+            this.btnExcluir.Location = new System.Drawing.Point(387, 2);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(90, 90);
             this.btnExcluir.TabIndex = 2;
@@ -126,7 +126,7 @@
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Image = global::GUI.Properties.Resources.Alterar;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAlterar.Location = new System.Drawing.Point(307, 2);
+            this.btnAlterar.Location = new System.Drawing.Point(291, 2);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(90, 90);
             this.btnAlterar.TabIndex = 1;
@@ -141,7 +141,7 @@
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.Image = global::GUI.Properties.Resources.Novo;
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnInserir.Location = new System.Drawing.Point(219, 2);
+            this.btnInserir.Location = new System.Drawing.Point(195, 2);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(90, 90);
             this.btnInserir.TabIndex = 0;

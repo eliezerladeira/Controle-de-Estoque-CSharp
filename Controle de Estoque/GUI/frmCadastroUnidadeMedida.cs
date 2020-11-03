@@ -95,18 +95,17 @@ namespace GUI
 
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            /*
-            frmConsultaCategoria f = new frmConsultaCategoria();
+            frmConsultaUnidadeMedida f = new frmConsultaUnidadeMedida();
             f.ShowDialog();
 
             if (f.codigo != 0)
             {
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
-                BLLCategoria bll = new BLLCategoria(cx);
+                BLLUnidadeMedida bll = new BLLUnidadeMedida(cx);
 
-                ModeloCategoria modelo = bll.CarregaModeloCategoria(f.codigo);
-                txtCodigo.Text = modelo.CatCod.ToString();
-                txtCategoria.Text = modelo.CatNome;
+                ModeloUnidadeMedida modelo = bll.CarregaModeloUnidadeMedida(f.codigo);
+                txtCodigo.Text = modelo.UmedCod.ToString();
+                txtDescricao.Text = modelo.UmedNome;
 
                 alteraBotoes(3);
             }
@@ -116,7 +115,6 @@ namespace GUI
                 this.alteraBotoes(1);
             }
             f.Dispose();
-            */
         }
     }
 }
