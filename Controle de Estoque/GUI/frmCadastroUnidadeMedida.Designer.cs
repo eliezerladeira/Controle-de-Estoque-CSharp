@@ -105,6 +105,7 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(489, 20);
             this.txtDescricao.TabIndex = 3;
+            this.txtDescricao.Leave += new System.EventHandler(this.txtDescricao_Leave);
             // 
             // frmCadastroUnidadeMedida
             // 

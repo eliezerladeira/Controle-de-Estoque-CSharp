@@ -91,6 +91,25 @@ namespace DAL
             return tabela;
         }
 
+        public int VerificaUnidadeMedda(String valor)
+        {
+            int r = 0;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexao.ObjetoConexao;
+            cmd.CommandText = "SELECT * FROM undmedida WHERE umed_nome = @nome";
+            cmd.Parameters.AddWithValue("@nome", valor);
+            conexao.Conectar();
+
+            SqlDataReader registro = cmd.ExecuteReader();
+            if (registro.HasRows)
+            {
+                registro.Read();
+                r = Convert.ToInt32(registro["umed_cod"]);
+            }
+            conexao.Desconectar();
+            return r;
+        }
+
         public ModeloUnidadeMedida CarregaModeloUnidadeMedida(int codigo)
         {
             ModeloUnidadeMedida modelo = new ModeloUnidadeMedida();
