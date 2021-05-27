@@ -46,12 +46,25 @@ namespace DAL
             modelo.ProCod = Convert.ToInt32(cmd.ExecuteScalar());
             conexao.Desconectar();
         }
-/*
-        public void Alterar(ModeloCategoria modelo)
+
+        public void Excluir(int codigo)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "UPDATE categoria SET cat_nome = @nome WHERE cat_cod = @codigo";
+            cmd.CommandText = "DELETE FROM produto WHERE pro_cod = @codigo";
+            cmd.Parameters.AddWithValue("@codigo", codigo);
+            conexao.Conectar();
+            cmd.ExecuteNonQuery();
+            conexao.Desconectar();
+        }
+
+        public void Alterar(ModeloProduto modelo)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexao.ObjetoConexao;
+            cmd.CommandText = "UPDATE produto SET pro_nome = @nome, pro_descricao = @descricao, pro_foto = @foto, pro_valorpago = @valorpago, "+
+                "pro_valorvenda = @valorvenda, pro_qtde = @qtde, undmed_cod = @undmed, cat_cod = @catcod, scat_cod = @scatcod WHERE "+
+                "pro_cod = @codigo";
             cmd.Parameters.AddWithValue("@nome", modelo.CatNome);
             cmd.Parameters.AddWithValue("@codigo", modelo.CatCod);
             conexao.Conectar();
@@ -60,44 +73,36 @@ namespace DAL
             conexao.Desconectar();
         }
 
-        public void Excluir(int codigo)
-        {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "DELETE FROM categoria WHERE cat_cod = @codigo";
-            cmd.Parameters.AddWithValue("@codigo", codigo);
-            conexao.Conectar();
-            cmd.ExecuteNonQuery();
-            conexao.Desconectar();
-        }
+        /*
 
-        public DataTable Localizar(String valor)
-        {
-            DataTable tabela = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM categoria WHERE cat_nome LIKE '%" + valor + "%'", conexao.StringConexao);
-            da.Fill(tabela);
-            return tabela;
-        }
 
-        public ModeloCategoria CarregaModeloCategoria(int codigo)
-        {
-            ModeloCategoria modelo = new ModeloCategoria();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = conexao.ObjetoConexao;
-            cmd.CommandText = "SELECT * FROM categoria WHERE cat_cod = @codigo";
-            cmd.Parameters.AddWithValue("@codigo", codigo);
-            conexao.Conectar();
-            // executereader: várias informações/registros do banco de dados
-            SqlDataReader registro = cmd.ExecuteReader();
-            if (registro.HasRows)
-            {
-                registro.Read();
-                modelo.CatCod = Convert.ToInt32(registro["cat_cod"]);
-                modelo.CatNome = Convert.ToString(registro["cat_nome"]);
-            }
-            conexao.Desconectar();
-            return modelo;
-        }
-*/
+                public DataTable Localizar(String valor)
+                {
+                    DataTable tabela = new DataTable();
+                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM categoria WHERE cat_nome LIKE '%" + valor + "%'", conexao.StringConexao);
+                    da.Fill(tabela);
+                    return tabela;
+                }
+
+                public ModeloCategoria CarregaModeloCategoria(int codigo)
+                {
+                    ModeloCategoria modelo = new ModeloCategoria();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conexao.ObjetoConexao;
+                    cmd.CommandText = "SELECT * FROM categoria WHERE cat_cod = @codigo";
+                    cmd.Parameters.AddWithValue("@codigo", codigo);
+                    conexao.Conectar();
+                    // executereader: várias informações/registros do banco de dados
+                    SqlDataReader registro = cmd.ExecuteReader();
+                    if (registro.HasRows)
+                    {
+                        registro.Read();
+                        modelo.CatCod = Convert.ToInt32(registro["cat_cod"]);
+                        modelo.CatNome = Convert.ToString(registro["cat_nome"]);
+                    }
+                    conexao.Desconectar();
+                    return modelo;
+                }
+        */
     }
 }
