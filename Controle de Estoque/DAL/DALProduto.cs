@@ -1,6 +1,7 @@
 ﻿using Modelo;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -65,44 +66,73 @@ namespace DAL
             cmd.CommandText = "UPDATE produto SET pro_nome = @nome, pro_descricao = @descricao, pro_foto = @foto, pro_valorpago = @valorpago, "+
                 "pro_valorvenda = @valorvenda, pro_qtde = @qtde, undmed_cod = @undmed, cat_cod = @catcod, scat_cod = @scatcod WHERE "+
                 "pro_cod = @codigo";
-            cmd.Parameters.AddWithValue("@nome", modelo.CatNome);
-            cmd.Parameters.AddWithValue("@codigo", modelo.CatCod);
+            cmd.Parameters.AddWithValue("@nome", modelo.ProNome);
+            cmd.Parameters.AddWithValue("@descricao", modelo.ProDescricao);
+            cmd.Parameters.Add("@foto", System.Data.SqlDbType.Image);
+
+            if (modelo.ProFoto == null)
+            {
+                cmd.Parameters["@foto"].value = DBNull.Value;
+            }
+            else
+            {
+                cmd.Parameters["@foto"].Value = modelo.ProFoto;
+            }
+
+            cmd.Parameters.AddWithValue("@valorpago", modelo.ProValorPago);
+            cmd.Parameters.AddWithValue("@valorvenda", modelo.ProValorVenda);
+            cmd.Parameters.AddWithValue("@qtde", modelo.ProQtde);
+            cmd.Parameters.AddWithValue("@undmed", modelo.UmedCod);
+            cmd.Parameters.AddWithValue("@catcod", modelo.CatCod);
+            cmd.Parameters.AddWithValue("@scatcod", modelo.SCatCod);
+            cmd.Parameters.AddWithValue("@codigo", modelo.ProCod);
+
             conexao.Conectar();
             // executenonquery: nenhuma informação do banco
             cmd.ExecuteNonQuery();
             conexao.Desconectar();
         }
 
-        /*
+        public DataTable Localizar(String valor)
+        {
+            DataTable tabela = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM produto WHERE pro_nome LIKE '%" + valor + "%'", conexao.StringConexao);
+            da.Fill(tabela);
+            return tabela;
+        }
 
+        public ModeloProduto CarregaModeloProduto(int codigo)
+        {
+            ModeloProduto modelo = new ModeloProduto();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = conexao.ObjetoConexao;
+            cmd.CommandText = "SELECT * FROM produto WHERE pro_cod = @codigo";
+            cmd.Parameters.AddWithValue("@codigo", codigo);
+            conexao.Conectar();
+            // executereader: várias informações/registros do banco de dados
+            SqlDataReader registro = cmd.ExecuteReader();
+            if (registro.HasRows)
+            {
+                registro.Read();
+                modelo.ProCod= Convert.ToInt32(registro["pro_cod"]);
+                modelo.ProNome = Convert.ToString(registro["pro_nome"]);
+                modelo.ProDescricao = Convert.ToString(registro["pro_descricao"]);
 
-                public DataTable Localizar(String valor)
+                try
                 {
-                    DataTable tabela = new DataTable();
-                    SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM categoria WHERE cat_nome LIKE '%" + valor + "%'", conexao.StringConexao);
-                    da.Fill(tabela);
-                    return tabela;
+                    modelo.ProFoto = (byte[])registro["pro_foto"];
                 }
+                catch { }
 
-                public ModeloCategoria CarregaModeloCategoria(int codigo)
-                {
-                    ModeloCategoria modelo = new ModeloCategoria();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = conexao.ObjetoConexao;
-                    cmd.CommandText = "SELECT * FROM categoria WHERE cat_cod = @codigo";
-                    cmd.Parameters.AddWithValue("@codigo", codigo);
-                    conexao.Conectar();
-                    // executereader: várias informações/registros do banco de dados
-                    SqlDataReader registro = cmd.ExecuteReader();
-                    if (registro.HasRows)
-                    {
-                        registro.Read();
-                        modelo.CatCod = Convert.ToInt32(registro["cat_cod"]);
-                        modelo.CatNome = Convert.ToString(registro["cat_nome"]);
-                    }
-                    conexao.Desconectar();
-                    return modelo;
-                }
-        */
+                modelo.ProValorPago = Convert.ToDouble(registro["pro_valorpago"]);
+                modelo.ProValorVenda = Convert.ToDouble(registro["pro_valorvenda"]);
+                modelo.ProQtde = Convert.ToInt32(registro["pro_qtde"]);
+                modelo.UmedCod = Convert.ToInt32(registro["undmed_cod"]);
+                modelo.CatCod = Convert.ToInt32(registro["cat_cod"]);
+                modelo.SCatCod = Convert.ToInt32(registro["scat_cod"]);
+            }
+            conexao.Desconectar();
+            return modelo;
+        }
     }
 }
