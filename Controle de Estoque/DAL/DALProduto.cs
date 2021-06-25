@@ -72,7 +72,7 @@ namespace DAL
 
             if (modelo.ProFoto == null)
             {
-                cmd.Parameters["@foto"].value = DBNull.Value;
+                cmd.Parameters["@foto"].Value = DBNull.Value;
             }
             else
             {

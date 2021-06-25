@@ -12,7 +12,7 @@ C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Estoque\Controle de 
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Estoque\Controle de Estoque\Modelo\obj\Debug\Modelo.pdb
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\Modelo\bin\Debug\Modelo.dll
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\Modelo\bin\Debug\Modelo.pdb
-C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\Modelo\obj\Debug\Modelo.dll
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\Modelo\obj\Debug\Modelo.pdb
+C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache

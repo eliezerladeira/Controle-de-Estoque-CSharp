@@ -121,6 +121,7 @@ namespace GUI
         {
             if (this.operacao == "Inserir")
             {
+                frmConsultaUnidadeMedida f = new frmConsultaUnidadeMedida();
                 int r = 0;
                 DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
                 BLLUnidadeMedida bll = new BLLUnidadeMedida(cx);
