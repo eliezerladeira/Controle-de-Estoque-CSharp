@@ -62,3 +62,4 @@ C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\GUI\obj\Debug\GUI.exe
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\GUI\obj\Debug\GUI.pdb
 C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\GUI\obj\Debug\GUI.frmConsultaUnidadeMedida.resources
+C:\Users\eliez\OneDrive\Projetos\Controle-de-Estoque-CSharp\Controle de Estoque\GUI\obj\Debug\GUI.frmCadastroProduto.resources

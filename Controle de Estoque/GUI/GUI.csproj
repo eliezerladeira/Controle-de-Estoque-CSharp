@@ -190,5 +190,11 @@
   <ItemGroup>
     <None Include="Resources\xmag_search_find_export_locate_5984.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loadphotoproduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removephotoproduct.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

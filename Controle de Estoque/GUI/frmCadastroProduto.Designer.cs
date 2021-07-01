@@ -29,57 +29,57 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtQtd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtValorPago = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtValorVenda = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbUndMedida = new System.Windows.Forms.ComboBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.cmbSubCategoria = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picFoto = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmdLoadFoto = new System.Windows.Forms.Button();
+            this.cmdRemoveFoto = new System.Windows.Forms.Button();
             this.panDados.SuspendLayout();
             this.panBotoes.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // panDados
             // 
-            this.panDados.Controls.Add(this.button2);
-            this.panDados.Controls.Add(this.button1);
+            this.panDados.Controls.Add(this.cmdRemoveFoto);
+            this.panDados.Controls.Add(this.cmdLoadFoto);
             this.panDados.Controls.Add(this.label10);
             this.panDados.Controls.Add(this.panel1);
-            this.panDados.Controls.Add(this.comboBox3);
-            this.panDados.Controls.Add(this.comboBox2);
-            this.panDados.Controls.Add(this.comboBox1);
+            this.panDados.Controls.Add(this.cmbSubCategoria);
+            this.panDados.Controls.Add(this.cmbCategoria);
+            this.panDados.Controls.Add(this.cmbUndMedida);
             this.panDados.Controls.Add(this.label9);
             this.panDados.Controls.Add(this.label8);
             this.panDados.Controls.Add(this.label7);
-            this.panDados.Controls.Add(this.textBox6);
+            this.panDados.Controls.Add(this.txtValorVenda);
             this.panDados.Controls.Add(this.label6);
-            this.panDados.Controls.Add(this.textBox5);
+            this.panDados.Controls.Add(this.txtValorPago);
             this.panDados.Controls.Add(this.label5);
-            this.panDados.Controls.Add(this.textBox4);
+            this.panDados.Controls.Add(this.txtQtd);
             this.panDados.Controls.Add(this.label4);
-            this.panDados.Controls.Add(this.textBox3);
+            this.panDados.Controls.Add(this.txtDescricao);
             this.panDados.Controls.Add(this.label3);
-            this.panDados.Controls.Add(this.textBox2);
+            this.panDados.Controls.Add(this.txtNome);
             this.panDados.Controls.Add(this.label2);
-            this.panDados.Controls.Add(this.textBox1);
+            this.panDados.Controls.Add(this.txtCodigo);
             this.panDados.Controls.Add(this.label1);
             // 
             // btnCancelar
@@ -105,6 +105,7 @@
             // btnInserir
             // 
             this.btnInserir.FlatAppearance.BorderSize = 0;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // label1
             // 
@@ -115,19 +116,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
-            // textBox1
+            // txtCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtCodigo.Location = new System.Drawing.Point(22, 45);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtCodigo.TabIndex = 1;
             // 
-            // textBox2
+            // txtNome
             // 
-            this.textBox2.Location = new System.Drawing.Point(22, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(520, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtNome.Location = new System.Drawing.Point(22, 95);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(520, 20);
+            this.txtNome.TabIndex = 3;
             // 
             // label2
             // 
@@ -138,13 +139,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nome";
             // 
-            // textBox3
+            // txtDescricao
             // 
-            this.textBox3.Location = new System.Drawing.Point(22, 149);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(520, 141);
-            this.textBox3.TabIndex = 5;
+            this.txtDescricao.Location = new System.Drawing.Point(22, 149);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(520, 141);
+            this.txtDescricao.TabIndex = 5;
             // 
             // label3
             // 
@@ -155,12 +156,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Descrição";
             // 
-            // textBox4
+            // txtQtd
             // 
-            this.textBox4.Location = new System.Drawing.Point(22, 377);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(239, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtQtd.Location = new System.Drawing.Point(22, 377);
+            this.txtQtd.Name = "txtQtd";
+            this.txtQtd.Size = new System.Drawing.Size(239, 20);
+            this.txtQtd.TabIndex = 7;
             // 
             // label4
             // 
@@ -171,12 +172,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Quantidade";
             // 
-            // textBox5
+            // txtValorPago
             // 
-            this.textBox5.Location = new System.Drawing.Point(22, 323);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(239, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtValorPago.Location = new System.Drawing.Point(22, 323);
+            this.txtValorPago.Name = "txtValorPago";
+            this.txtValorPago.Size = new System.Drawing.Size(239, 20);
+            this.txtValorPago.TabIndex = 9;
             // 
             // label5
             // 
@@ -187,12 +188,12 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Valor Pago";
             // 
-            // textBox6
+            // txtValorVenda
             // 
-            this.textBox6.Location = new System.Drawing.Point(303, 323);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(239, 20);
-            this.textBox6.TabIndex = 11;
+            this.txtValorVenda.Location = new System.Drawing.Point(303, 323);
+            this.txtValorVenda.Name = "txtValorVenda";
+            this.txtValorVenda.Size = new System.Drawing.Size(239, 20);
+            this.txtValorVenda.TabIndex = 11;
             // 
             // label6
             // 
@@ -230,38 +231,48 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Subcategoria";
             // 
-            // comboBox1
+            // cmbUndMedida
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(304, 377);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(239, 21);
-            this.comboBox1.TabIndex = 15;
+            this.cmbUndMedida.FormattingEnabled = true;
+            this.cmbUndMedida.Location = new System.Drawing.Point(304, 377);
+            this.cmbUndMedida.Name = "cmbUndMedida";
+            this.cmbUndMedida.Size = new System.Drawing.Size(239, 21);
+            this.cmbUndMedida.TabIndex = 15;
             // 
-            // comboBox2
+            // cmbCategoria
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(22, 432);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(239, 21);
-            this.comboBox2.TabIndex = 16;
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(22, 432);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(239, 21);
+            this.cmbCategoria.TabIndex = 16;
             // 
-            // comboBox3
+            // cmbSubCategoria
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(304, 432);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(239, 21);
-            this.comboBox3.TabIndex = 17;
+            this.cmbSubCategoria.FormattingEnabled = true;
+            this.cmbSubCategoria.Location = new System.Drawing.Point(304, 432);
+            this.cmbSubCategoria.Name = "cmbSubCategoria";
+            this.cmbSubCategoria.Size = new System.Drawing.Size(239, 21);
+            this.cmbSubCategoria.TabIndex = 17;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.picFoto);
             this.panel1.Location = new System.Drawing.Point(549, 46);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(208, 204);
             this.panel1.TabIndex = 18;
+            // 
+            // picFoto
+            // 
+            this.picFoto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picFoto.Location = new System.Drawing.Point(0, 0);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(204, 200);
+            this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFoto.TabIndex = 0;
+            this.picFoto.TabStop = false;
             // 
             // label10
             // 
@@ -272,33 +283,29 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "Foto";
             // 
-            // button1
+            // cmdLoadFoto
             // 
-            this.button1.Location = new System.Drawing.Point(548, 256);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 34);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cmdLoadFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdLoadFoto.Image = global::GUI.Properties.Resources.loadphotoproduct;
+            this.cmdLoadFoto.Location = new System.Drawing.Point(548, 256);
+            this.cmdLoadFoto.Name = "cmdLoadFoto";
+            this.cmdLoadFoto.Size = new System.Drawing.Size(100, 64);
+            this.cmdLoadFoto.TabIndex = 20;
+            this.cmdLoadFoto.Text = "Carregar Foto";
+            this.cmdLoadFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdLoadFoto.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // cmdRemoveFoto
             // 
-            this.button2.Location = new System.Drawing.Point(656, 256);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 34);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.cmdRemoveFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdRemoveFoto.Image = global::GUI.Properties.Resources.removephotoproduct;
+            this.cmdRemoveFoto.Location = new System.Drawing.Point(656, 256);
+            this.cmdRemoveFoto.Name = "cmdRemoveFoto";
+            this.cmdRemoveFoto.Size = new System.Drawing.Size(100, 64);
+            this.cmdRemoveFoto.TabIndex = 21;
+            this.cmdRemoveFoto.Text = "Remover Foto";
+            this.cmdRemoveFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.cmdRemoveFoto.UseVisualStyleBackColor = true;
             // 
             // frmCadastroProduto
             // 
@@ -306,39 +313,40 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Name = "frmCadastroProduto";
             this.Text = "Cadastro de Produtos";
+            this.Load += new System.EventHandler(this.frmCadastroProduto_Load);
             this.panDados.ResumeLayout(false);
             this.panDados.PerformLayout();
             this.panBotoes.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cmdRemoveFoto;
+        private System.Windows.Forms.Button cmdLoadFoto;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSubCategoria;
+        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.ComboBox cmbUndMedida;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtValorVenda;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtValorPago;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtQtd;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picFoto;
     }
 }
