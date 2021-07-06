@@ -162,6 +162,8 @@
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(239, 20);
             this.txtQtd.TabIndex = 7;
+            this.txtQtd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQtd_KeyPress);
+            this.txtQtd.Leave += new System.EventHandler(this.txtQtd_Leave);
             // 
             // label4
             // 
@@ -178,6 +180,8 @@
             this.txtValorPago.Name = "txtValorPago";
             this.txtValorPago.Size = new System.Drawing.Size(239, 20);
             this.txtValorPago.TabIndex = 9;
+            this.txtValorPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorPago_KeyPress);
+            this.txtValorPago.Leave += new System.EventHandler(this.txtValorPago_Leave);
             // 
             // label5
             // 
@@ -194,6 +198,7 @@
             this.txtValorVenda.Name = "txtValorVenda";
             this.txtValorVenda.Size = new System.Drawing.Size(239, 20);
             this.txtValorVenda.TabIndex = 11;
+            this.txtValorVenda.Leave += new System.EventHandler(this.txtValorVenda_Leave);
             // 
             // label6
             // 
