@@ -101,6 +101,7 @@
             // btnAlterar
             // 
             this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnInserir
             // 
@@ -128,7 +129,7 @@
             this.txtNome.Location = new System.Drawing.Point(22, 95);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(520, 20);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 2;
             // 
             // label2
             // 
@@ -145,7 +146,7 @@
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(520, 141);
-            this.txtDescricao.TabIndex = 5;
+            this.txtDescricao.TabIndex = 3;
             // 
             // label3
             // 
@@ -161,7 +162,8 @@
             this.txtQtd.Location = new System.Drawing.Point(22, 377);
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(239, 20);
-            this.txtQtd.TabIndex = 7;
+            this.txtQtd.TabIndex = 6;
+            this.txtQtd.Text = "0.00";
             this.txtQtd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQtd_KeyPress);
             this.txtQtd.Leave += new System.EventHandler(this.txtQtd_Leave);
             // 
@@ -179,7 +181,8 @@
             this.txtValorPago.Location = new System.Drawing.Point(22, 323);
             this.txtValorPago.Name = "txtValorPago";
             this.txtValorPago.Size = new System.Drawing.Size(239, 20);
-            this.txtValorPago.TabIndex = 9;
+            this.txtValorPago.TabIndex = 4;
+            this.txtValorPago.Text = "0.00";
             this.txtValorPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorPago_KeyPress);
             this.txtValorPago.Leave += new System.EventHandler(this.txtValorPago_Leave);
             // 
@@ -197,7 +200,8 @@
             this.txtValorVenda.Location = new System.Drawing.Point(303, 323);
             this.txtValorVenda.Name = "txtValorVenda";
             this.txtValorVenda.Size = new System.Drawing.Size(239, 20);
-            this.txtValorVenda.TabIndex = 11;
+            this.txtValorVenda.TabIndex = 5;
+            this.txtValorVenda.Text = "0.00";
             this.txtValorVenda.Leave += new System.EventHandler(this.txtValorVenda_Leave);
             // 
             // label6
@@ -242,7 +246,7 @@
             this.cmbUndMedida.Location = new System.Drawing.Point(304, 377);
             this.cmbUndMedida.Name = "cmbUndMedida";
             this.cmbUndMedida.Size = new System.Drawing.Size(239, 21);
-            this.cmbUndMedida.TabIndex = 15;
+            this.cmbUndMedida.TabIndex = 7;
             // 
             // cmbCategoria
             // 
@@ -250,7 +254,7 @@
             this.cmbCategoria.Location = new System.Drawing.Point(22, 432);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(239, 21);
-            this.cmbCategoria.TabIndex = 16;
+            this.cmbCategoria.TabIndex = 8;
             // 
             // cmbSubCategoria
             // 
@@ -258,7 +262,7 @@
             this.cmbSubCategoria.Location = new System.Drawing.Point(304, 432);
             this.cmbSubCategoria.Name = "cmbSubCategoria";
             this.cmbSubCategoria.Size = new System.Drawing.Size(239, 21);
-            this.cmbSubCategoria.TabIndex = 17;
+            this.cmbSubCategoria.TabIndex = 9;
             // 
             // panel1
             // 
@@ -295,7 +299,7 @@
             this.cmdLoadFoto.Location = new System.Drawing.Point(548, 256);
             this.cmdLoadFoto.Name = "cmdLoadFoto";
             this.cmdLoadFoto.Size = new System.Drawing.Size(100, 64);
-            this.cmdLoadFoto.TabIndex = 20;
+            this.cmdLoadFoto.TabIndex = 10;
             this.cmdLoadFoto.Text = "Carregar Foto";
             this.cmdLoadFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdLoadFoto.UseVisualStyleBackColor = true;
@@ -307,7 +311,7 @@
             this.cmdRemoveFoto.Location = new System.Drawing.Point(656, 256);
             this.cmdRemoveFoto.Name = "cmdRemoveFoto";
             this.cmdRemoveFoto.Size = new System.Drawing.Size(100, 64);
-            this.cmdRemoveFoto.TabIndex = 21;
+            this.cmdRemoveFoto.TabIndex = 11;
             this.cmdRemoveFoto.Text = "Remover Foto";
             this.cmdRemoveFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdRemoveFoto.UseVisualStyleBackColor = true;
