@@ -95,6 +95,15 @@ namespace DAL
             return tabela;
         }
 
+        public DataTable LocalizarPorCategoria(int categoria)
+        {
+            DataTable tabela = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT sc.scat_cod, sc.scat_nome, sc.cat_cod, c.cat_nome FROM subcategoria sc " +
+                "INNER JOIN categoria c ON sc.cat_cod = c.cat_cod " +
+                "WHERE sc.cat_cod = " + categoria.ToString(), conexao.StringConexao);
+            da.Fill(tabela);
+            return tabela;
+        }
         public ModeloSubCategoria CarregaModeloSubCategoria(int codigo)
         {
             ModeloSubCategoria modelo = new ModeloSubCategoria();

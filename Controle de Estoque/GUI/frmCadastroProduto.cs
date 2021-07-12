@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +28,32 @@ namespace GUI
         private void frmCadastroProduto_Load(object sender, EventArgs e)
         {
             this.alteraBotoes(1);
+
+            DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
+            BLLCategoria bll = new BLLCategoria(cx);
+
+            cmbCategoria.DataSource = bll.Localizar("");
+            cmbCategoria.DisplayMember = "cat_nome";
+            cmbCategoria.ValueMember = "cat_cod";
+
+            try
+            {
+                BLLSubCategoria sbll = new BLLSubCategoria(cx);
+
+                cmbSubCategoria.DataSource = sbll.LocalizarPorCategoria((int)cmbCategoria.SelectedValue);
+                cmbSubCategoria.DisplayMember = "scat_nome";
+                cmbSubCategoria.ValueMember = "scat_cod";
+            }
+            catch
+            {
+                //MessageBox.Show("Cadastre uma categoria.");
+            }
+
+            BLLUnidadeMedida ubll = new BLLUnidadeMedida(cx);
+
+            cmbUndMedida.DataSource = ubll.Localizar("");
+            cmbUndMedida.DisplayMember = "umed_nome";
+            cmbUndMedida.ValueMember = "umed_cod";
         }
 
         private void txtValorVenda_KeyPress(object sender, KeyPressEventArgs e)
@@ -148,6 +176,25 @@ namespace GUI
         {
             this.operacao = "Alterar";
             this.alteraBotoes(2);
+        }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DALConexao cx = new DALConexao(DadosDaConexao.StringDeConexao);
+
+            try
+            {
+                cmbSubCategoria.Text = "";
+                BLLSubCategoria sbll = new BLLSubCategoria(cx);
+
+                cmbSubCategoria.DataSource = sbll.LocalizarPorCategoria((int)cmbCategoria.SelectedValue);
+                cmbSubCategoria.DisplayMember = "scat_nome";
+                cmbSubCategoria.ValueMember = "scat_cod";
+            }
+            catch
+            {
+                //MessageBox.Show("Cadastre uma categoria.");
+            }
         }
     }
 }
