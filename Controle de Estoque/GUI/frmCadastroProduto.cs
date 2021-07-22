@@ -196,6 +196,24 @@ namespace GUI
                 //MessageBox.Show("Cadastre uma categoria.");
             }
         }
+
+        private void cmdLoadFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog od = new OpenFileDialog();
+            od.ShowDialog();
+            
+            if (!string.IsNullOrEmpty(od.FileName))
+            {
+                this.foto = od.FileName;
+                picFoto.Load(this.foto);
+            }
+        }
+
+        private void cmdRemoveFoto_Click(object sender, EventArgs e)
+        {
+            this.foto = "";
+            picFoto.Image = null;
+        }
     }
 }
 

@@ -304,6 +304,7 @@
             this.cmdLoadFoto.Text = "Carregar Foto";
             this.cmdLoadFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdLoadFoto.UseVisualStyleBackColor = true;
+            this.cmdLoadFoto.Click += new System.EventHandler(this.cmdLoadFoto_Click);
             // 
             // cmdRemoveFoto
             // 
@@ -316,6 +317,7 @@
             this.cmdRemoveFoto.Text = "Remover Foto";
             this.cmdRemoveFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.cmdRemoveFoto.UseVisualStyleBackColor = true;
+            this.cmdRemoveFoto.Click += new System.EventHandler(this.cmdRemoveFoto_Click);
             // 
             // frmCadastroProduto
             // 
